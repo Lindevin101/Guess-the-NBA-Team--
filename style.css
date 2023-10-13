@@ -8,5 +8,37 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% center;
-    opacity: 30%;
+    opacity: 0.3; 
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 0;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.Score {
+    text-align: center;
+}
+.wins {
+    color: green;
+    display: inline-block; 
+    margin: 0 20px;
+}
+.losses {
+    color: red; 
+    display: inline-block; 
+    margin: 0 20px;
+}
+.count {
+    font-weight: bold; 
+}
+.word {
+    text-align: center;
 }
