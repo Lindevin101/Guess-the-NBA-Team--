@@ -1,22 +1,12 @@
-body {
-    position: relative;
-    background-image: url("https://www.sportstravelmagazine.com/wp-content/uploads/2022/08/NBA.jpeg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 52% center;
-    background-repeat: no-repeat;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-body::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5 in this example) to control the background opacity */
-    position: absolute;
+.background-image {
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    background-image: url("https://www.sportstravelmagazine.com/wp-content/uploads/2022/08/NBA.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+    opacity: 30%;
 }
