@@ -10,19 +10,16 @@
     background-position: 50% center;
     opacity: 0.3; 
 }
-
 h1 {
     text-align: center;
     font-size: 70px;
     margin-top: 0;
 }
-
 .group {
     display: flex;
     justify-content: center;
     font-size: 40px;
 }
-
 .wins {
     color: green;
     display: inline-block; 
@@ -39,4 +36,37 @@ h1 {
 .word {
     text-align: center;
     font-size: 25px;
+}
+.unknown {
+    font-size: 44px;
+}
+.main{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.active {
+    background-color: blue;
+    color: #fff;
+}
+.container {
+    margin-top: 50px;
+    font-size: 22px;
+}
+.row{
+    text-align: center;
+    margin: 10px;
+}
+.letter{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    text-transform: uppercase;
+}
+.letter:hover {
+    background-color: blueviolet;
+}
+.input-form{
+    margin-top: 50px;
+    text-align: center;
 }
