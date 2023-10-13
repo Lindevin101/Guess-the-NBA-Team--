@@ -23,9 +23,6 @@ h1 {
     font-size: 40px;
 }
 
-.Score {
-    text-align: center;
-}
 .wins {
     color: green;
     display: inline-block; 
@@ -41,4 +38,5 @@ h1 {
 }
 .word {
     text-align: center;
+    font-size: 25px;
 }

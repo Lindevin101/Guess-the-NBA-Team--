@@ -25,7 +25,34 @@
             <h3 class="unknown"></h3>
             <h3 class="line">This word has <span class="count">#</span> letters </h3>
         </div>
-
+        <div class="keyboard">
+            <div class="top-row row"></div>
+            <div class="mid-row row"></div>
+            <div class="bot-row row"></div>
+        </div>
+        <script>
+            const rows = ['top-row', 'mid-row', 'bot-row']
+            const letters = [
+            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+            ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+            ];
+            for (let i = 0; i < 3; i++) {
+                const rowDiv = document.querySelector('.' + rows[i]);
+                for (let j = 0; j < letters[i].length; j++) {
+                    const letterDiv = document.createElement ('div');
+                    letterDiv.className = 'letter';
+                    letterDiv.dataset.letter = letters[i][j];
+                    letterDiv.textContent = letters[i][j];
+                    rowDiv.appendChild(letterDiv);
+                }
+            }
+        </script>
+        <div class="input-form">
+            <label for="input"></label>
+            <input type="text" id="input" autofocus="autofocus"/>
+            <button class="start">New Game</button>
+        </div>
     </main>
 </body>
 </html>
