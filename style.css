@@ -15,10 +15,12 @@ body::before {
 
 body {
     text-align: center;
+    padding-top: 50px;
 }
 
 h1 {
   text-align: center;
+  padding: inherit ;
 }
 .group {
     display: flex;
