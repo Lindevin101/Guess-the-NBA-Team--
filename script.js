@@ -10,29 +10,31 @@ let words = [
     "TRAILBLAZERS", "KINGS", "SPURS", "RAPTORS", "JAZZ", "WIZARDS"
 ];
 
-let answer = "";
-let guessedLetters = [];
-let usedWords = [];
+let answer = ""; /* stores answer*/
+let guessedLetters = [];/*stores guessed letters*/
+let usedWords = []; /*stores used words*/
 
-let tries = document.querySelector(".remaining");
-let wins = document.querySelector(".dubs");
-let losses = document.querySelector(".wrong");
+let tries = document.querySelector(".remaining");/* sotres remaining attempts*/
+let wins = document.querySelector(".dubs");/*dsiplay win count*/
+let losses = document.querySelector(".wrong");/*displays loss count*/
 
-let winScore = 0;
-let lossScore = 0;
+let winScore = 0; /* track wins*/
+let lossScore = 0; /*track loss*/
 
+/* controls keyboard */
 function highlight(e) {
     for (let i = 0; i < letters.length; i++) {
         if (letters[i].dataset.letter === e.key) {
             letters[i].classList.add("active");
 
-            // Store the correct key in the answer
+            /*convert input to loweercase */
             answer = answer.toLowerCase();
             let curLet = letters[i];
             if (answer.includes(e.key)) {
                 let results = [];
                 letters[i].style.background = "green";
 
+                /*used to find occurrences of the guesed letter*/
                 function finder() {
                     let index = answer.indexOf(curLet.innerHTML);
                     while (index !== -1) {
@@ -72,6 +74,7 @@ function highlight(e) {
     }
 }
 
+/* function to handle unclick event */
 function unClick(e) {
     for (let i = 0; i < letters.length; i++) {
         if (letters[i].dataset.letter === e.key) {
@@ -84,6 +87,7 @@ function unClick(e) {
 input.addEventListener("keydown", highlight);
 input.addEventListener("keyup", unClick);
 
+/*randomize the hidden word*/
 function randomizeWord() {
     if (words.length === 0) {
         console.log(usedWords);
@@ -101,6 +105,7 @@ let blankWord = "";
 let newWord = [];
 let count = document.querySelector(".count");
 
+/* create new team name to be guessed */
 function createBlank() {
     clearBoardStyles();
     tries.innerText = 6;
@@ -122,6 +127,7 @@ function createBlank() {
     count.innerText = answer.length;
 }
 
+/* "new game" button */
 createBlank();
 startBtn.addEventListener("click", createBlank);
 
